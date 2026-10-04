@@ -45,7 +45,7 @@ const Livro = [
     },
     {
         id: 10 , titulo: 'Enciclopédia do Corpo Humano' , autor: 'Pé da letra' ,
-        Ano_lancamento: '2023' , genero: 'Educação' , tipo: 'Enciclopédia'
+        Ano_lancamento: '2023' , genero: 'Educação' , tipo: 'enciclopédia'
     },
     
 ];
@@ -132,22 +132,22 @@ const Exemplar = [
         id: 302 , livro_id: 1 , edicao_id: 102 , status:'indisponível' , DatAdqui: '14-04-2026' , loc: 'Est: 1 - Prat: 3' ,COD:'EXP0012'
     },
     {
-        id: 303 , livro_id: 2 , edicao_id: 103 , status:'disponível' , DatAdqui: '05-05-2026' , loc: 'Est: 2 - Prat: 1' ,COD:'EXP0037'
+        id: 303 , livro_id: 2 , edicao_id: 103 , status:'indisponível' , DatAdqui: '05-05-2026' , loc: 'Est: 2 - Prat: 1' ,COD:'EXP0037'
     },
     {
-        id: 304 , livro_id: 3 , edicao_id: 104 , status:'disponível' , DatAdqui: '07-03-2026' , loc: 'Est: 1 - Prat: 1' ,COD:'EXP0038'
+        id: 304 , livro_id: 3 , edicao_id: 104 , status:'indisponível' , DatAdqui: '07-03-2026' , loc: 'Est: 1 - Prat: 1' ,COD:'EXP0038'
     },
     {
         id: 305 , livro_id: 3 , edicao_id: 104 , status:'disponível' , DatAdqui: '07-03-2026' , loc: 'Est: 1 - Prat: 1' ,COD:'EXP0040'
     },
     {
-        id: 306 , livro_id: 3 , edicao_id: 105 , status:'indisponível' , DatAdqui: '08-03-2026' , loc: 'Est: 1 - Prat: 2' ,COD:'EXP0042'
+        id: 306 , livro_id: 3 , edicao_id: 105 , status:'disponível' , DatAdqui: '08-03-2026' , loc: 'Est: 1 - Prat: 2' ,COD:'EXP0042'
     },
     {
         id: 307 , livro_id: 4 , edicao_id: 106 , status:'disponível' , DatAdqui: '08-03-2026' , loc: 'Est: 1 - Prat: 1' ,COD:'EXP0043'
     },
     {
-        id: 308 , livro_id: 4 , edicao_id: 106 , status:'indisponível' , DatAdqui: '08-03-2026' , loc: 'Est: 1 - Prat: 1' ,COD:'EXP0044'
+        id: 308 , livro_id: 4 , edicao_id: 106 , status:'disponível' , DatAdqui: '08-03-2026' , loc: 'Est: 1 - Prat: 1' ,COD:'EXP0044'
     },
     {
         id: 309 , livro_id: 5 , edicao_id: 107 , status:'indisponível' , DatAdqui: '08-03-2026' , loc: 'Est: 1 - Prat: 2' ,COD:'EXP0045'
@@ -171,16 +171,16 @@ const Exemplar = [
         id: 315 , livro_id: 7 , edicao_id: 111 , status:'disponível' , DatAdqui: '12-05-2026' , loc: 'Est: 2 - Prat: 2' ,COD:'EXP0062'
     },
     {
-        id: 316 , livro_id: 8 , edicao_id: 112 , status:'indisponível' , DatAdqui: '14-05-2026' , loc: 'Est: 2 - Prat: 3' ,COD:'EXP0063'
+        id: 316 , livro_id: 8 , edicao_id: 112 , status:'disponível' , DatAdqui: '14-05-2026' , loc: 'Est: 2 - Prat: 3' ,COD:'EXP0063'
     },
     {
-        id: 317 , livro_id: 8 , edicao_id: 112 , status:'indisponível' , DatAdqui: '14-05-2026' , loc: 'Est: 2 - Prat: 3' ,COD:'EXP0064'
+        id: 317 , livro_id: 8 , edicao_id: 112 , status:'disponível' , DatAdqui: '14-05-2026' , loc: 'Est: 2 - Prat: 3' ,COD:'EXP0064'
     },
     {
         id: 318 , livro_id: 9 , edicao_id: 113 , status:'disponível' , DatAdqui: '27-05-2026' , loc: 'Est: 1 - Prat: 3' ,COD:'EXP0070'
     },
     {
-        id: 319 , livro_id: 10 , edicao_id: 114 , status:'indisponível' , DatAdqui: '30-05-2026' , loc: 'Est: 3 - Prat: 1' ,COD:'EXP0071'
+        id: 319 , livro_id: 10 , edicao_id: 114 , status:'disponível' , DatAdqui: '30-05-2026' , loc: 'Est: 3 - Prat: 1' ,COD:'EXP0071'
     },
 
 ];
@@ -224,6 +224,26 @@ const leitores = [
     }
 ];
 
+const Emprestimos =[
+    {
+        id: 500 , leitor_id: 1, exemplar_id: 302, data_emprestimo: '2026-08-14', data_devolucao: '2026-08-21', status: 'em andamento'
+    },
+    {
+        id: 501 , leitor_id: 1, exemplar_id: 309, data_emprestimo: '2026-08-10', data_devolucao: '2026-08-17', status: 'em andamento'
+    },
+    {
+        id: 502 , leitor_id: 2, exemplar_id: 319, data_emprestimo: '2026-08-01', data_devolucao: '2026-08-08', status: 'devolvido'
+    },
+    {
+        id: 503 , leitor_id: 3, exemplar_id: 308, data_emprestimo: '2026-08-05', data_devolucao: '2026-08-12', status: 'devolvido'
+    },
+    {  
+        id: 504 , leitor_id: 4, exemplar_id: 303, data_emprestimo: '2026-08-15', data_devolucao: '2026-08-22', status: 'em andamento'
+    },
+    {
+        id: 505 , leitor_id: 5, exemplar_id: 304, data_emprestimo: '2026-08-20', data_devolucao: '2026-08-27', status: 'em andamento'
+    }
+];
 
 //Middlewares
 
@@ -261,9 +281,9 @@ function ValidarLivro(req, res, next){
 function ValidarEdicao(req, res, next){
     const { livro_id, ISBN, editora, Datpub, idioma, edicao } = req.body;
 
-    if(
+    if(// esse "!Number.isInteger(Number(livro_id))" verifica se o livro_id é um numero
         !livro_id || !ISBN || !editora || !Datpub || !idioma || !edicao ||
-        livro_id === undefined || ISBN.trim() == '' || editora.trim() == '' || Datpub.trim() == '' || idioma.trim() == '' || edicao.trim() == ''
+        !Number.isInteger(Number(livro_id)) || ISBN.trim() == '' || editora.trim() == '' || Datpub.trim() == '' || idioma.trim() == '' || edicao.trim() == ''
     ){
         return res.status(400).json({erro: 'Todos os campos são obrigatórios e não podem estar vazios'});
     };
@@ -276,7 +296,7 @@ function ValidarExemplar(req, res, next){
 
     if(
         !livro_id || !edicao_id || !status || !DatAdqui || !loc || !COD ||
-        livro_id === undefined || edicao_id === undefined || status.trim() == '' || DatAdqui.trim() == '' || loc.trim() == '' || COD.trim() == ''
+        !Number.isInteger(Number(livro_id)) || !Number.isInteger(Number(edicao_id)) || status.trim() == '' || DatAdqui.trim() == '' || loc.trim() == '' || COD.trim() == ''
     ){
         return res.status(400).json({erro: 'Todos os campos são obrigatórios e não podem estar vazios'});
     }
@@ -292,6 +312,100 @@ function RegistrarLog(req, res, next){
     );
     next();
 };
+
+//Faz varias da verificações que permitem fazer um emprestimo
+function ValidarEmprestimo(req, res, next){
+    const {leitor_id , exemplar_id} = req.body;
+
+    if(
+        !leitor_id || !exemplar_id || !Number.isInteger(Number(leitor_id)) ||
+        !Number.isInteger(Number(exemplar_id))
+    ){
+        return res.status(400).json({erro: 'Todos os campos são obrigatórios e não podem estar vazios e devem ser numeros'});
+    }
+
+    const EsseExemplar = Exemplar.find(i => i.id == Number(exemplar_id))
+
+    if(!EsseExemplar){
+        return res.status(404).json({erro: 'Exemplar não encontrado'})
+    }
+
+    if(EsseExemplar.status != "disponível"){
+        return res.status(400).json({erro: 'Exemplar não disponível para empréstimo'})
+    }
+
+    // Regra 1 da biblioteca: enciclopédias não podem ser emprestadas
+    const EsseLivro = Livro.find(i => i.id == EsseExemplar.livro_id)
+
+    if(EsseLivro.tipo == 'enciclopédia'){
+        return res.status(400).json({erro: 'Enciclopédias não podem ser emprestadas'});
+    }
+
+    // Regra 2 da biblioteca: um leitor não pode ter mais de 3 livros empretados ao mesmo tempo
+    const quanEmprestimo = Emprestimos.filter(i => i.leitor_id == leitor_id && i.status == "em andamento");
+
+    if(quanEmprestimo.length >= 3){
+        return res.status(400).json({erro: 'você já atingiu o limite de livros alugados'});
+    }
+
+    const EsseLeitor = leitores.find(i => i.id == Number(leitor_id))
+
+    if(!EsseLeitor){
+        return res.status(404).json({erro: 'Leitor não encontrado'});
+    }
+
+    // Regra 3 da biblioteca: um leitor não pode ter emprestimos em andamento se tiver multa em aberto
+    if(EsseLeitor.multa > 0){
+        return res.status(400).json({erro: 'Leitor com multa em aberto'});
+    }
+
+    next();
+};
+
+function AlterarStatusExemplar(req, res, next){
+    const Exemplar_id = req.body.exemplar_id;
+
+    const exemplar = Exemplar.find(i => i.id == Exemplar_id);
+
+    exemplar.status = "indisponível";
+
+    next();
+};
+
+function ChecarDatas( req,res, next){
+    const leitor_id = Number(req.body.leitor_id);
+    
+    const leitor = leitores.find(i => i.id === leitor_id);
+    
+    const dataAtual = new Date();
+    
+    const emprestimosAtivos = Emprestimos.filter(
+        i => i.leitor_id === leitor_id &&
+        i.status === "em andamento"
+    );
+
+    const emprestimoAtrasado = emprestimosAtivos.find(i => {
+    
+        const dataDevolucao = new Date(i.data_devolucao);
+
+        return dataAtual > dataDevolucao;
+    });
+    
+    if (emprestimoAtrasado) {
+    
+        const multa = 15
+    
+        leitor.multa += multa;
+    
+        return res.status(400).json({
+            erro: "Você possui empréstimos atrasados",
+            multaGerada: multa,
+            multaTotal: leitor.multa
+        });
+    }
+    
+    next();
+}
 
 //Rotas
 
@@ -437,15 +551,38 @@ app.get("/leitores/:id", (req, res) => {
     res.json(leitor);
 });
 
+//lista todos os emprestimos
+app.get('/emprestimos', (req, res) => {
+    res.status(200).json(Emprestimos);
+});
+
+//procura os emprestimos de um leitor
+app.get('/emprestimos/leitor/:id', (req,res) =>{
+    const id = parseInt(req.params.id);
+
+    const leitor = leitores.find(i => i.id === id);
+
+    if (!leitor){ 
+        return res.status(404).send("Leitor não encontrado.");
+    }
+
+    const EmpreResultado = Emprestimos.filter(i => i.leitor_id === id);
+    
+    res.status(200).json(EmpreResultado);
+});
+
+//lista todos os emprestimos pendentes
+app.get('/emprestimos/pendentes', (req,res) =>{
+    const EmpreResultado = Emprestimos.filter(i => i.status === "em andamento");
+    
+    res.status(200).json(EmpreResultado);
+});
+
 //ROTAS POST
 
 //POST para adicionar um novo livro
 app.post('/livro',[Autenticar, ValidarLivro, RegistrarLog], (req, res) =>{
     const { titulo, autor, Ano_lancamento, genero, tipo } = req.body;
-
-    if(!titulo || !autor || !Ano_lancamento || !genero || !tipo){
-        return res.status(400).json({erro: 'Todos os campos são obrigatórios'});
-    }
 
     const NewLivro = {
         id: Math.max(...Livro.map(i => i.id)) + 1,
@@ -463,10 +600,6 @@ app.post('/livro',[Autenticar, ValidarLivro, RegistrarLog], (req, res) =>{
 app.post('/edicao', [Autenticar, ValidarEdicao, RegistrarLog], (req, res) =>{
     const { livro_id, ISBN, editora, Datpub, idioma, edicao } = req.body;
 
-    if(!livro_id || !ISBN || !editora || !Datpub || !idioma || !edicao){
-        return res.status(400).json({erro: 'Todos os campos são obrigatórios'});
-    }
-
     const NewEdicao = {
         id: Math.max(...Edicao.map(i => i.id)) + 1,
         livro_id,
@@ -483,10 +616,6 @@ app.post('/edicao', [Autenticar, ValidarEdicao, RegistrarLog], (req, res) =>{
 //POST para adicionar um novo exemplar
 app.post('/exemplar', [Autenticar, ValidarExemplar, RegistrarLog], (req, res) =>{
     const { livro_id, edicao_id, status, DatAdqui, loc, COD } = req.body;
-
-    if(!livro_id || !edicao_id || !status || !DatAdqui || !loc || !COD){
-        return res.status(400).json({erro: 'Todos os campos são obrigatórios'});
-    }
 
     const NewExemplar = {
         id: Math.max(...Exemplar.map(i => i.id)) + 1,
@@ -514,6 +643,30 @@ app.post("/leitores", (req, res) => {
 
     leitores.push(novoLeitor);
     res.status(201).json(novoLeitor);
+});
+
+app.post('/emprestimo', [Autenticar, ValidarEmprestimo, ChecarDatas, AlterarStatusExemplar,  RegistrarLog], (req, res) =>{
+    const {leitor_id , exemplar_id} = req.body;
+
+    const data_emprestimo = new Date();
+
+    const data_devolucao = new Date(data_emprestimo);
+
+    data_devolucao.setDate(data_devolucao.getDate() + 7);
+
+    const NovoEmprestimo = {
+        id: Math.max(...Emprestimos.map(i => i.id)) + 1,
+        leitor_id,
+        exemplar_id,
+        //tranforma os valores Date em string no mesmo formato que está nas variaveis
+        data_emprestimo: data_emprestimo.toISOString().slice(0, 10),
+        data_devolucao: data_devolucao.toISOString().slice(0, 10),
+        status: "em andamento"
+    };
+
+    Emprestimos.push(NovoEmprestimo);
+
+    res.status(201).json(NovoEmprestimo)
 });
 
 //Rotas PATCH/PUT
@@ -570,6 +723,31 @@ app.put("/leitores/:id", (req, res) => {
     leitor.multa = multa;
 
     res.json(leitor);
+});
+
+app.patch('/emprestimos/:id/devolver', (req, res) => {
+    const id = parseInt(req.params.id);
+    const emprestimo = Emprestimos.find(i => i.id === id);
+
+    if (!emprestimo) {
+        return res.status(404).json({ erro: 'Empréstimo não encontrado' });
+    }
+
+    if (emprestimo.status === 'devolvido') {
+        return res.status(400).json({ erro: 'Empréstimo já foi devolvido' });
+    }
+
+    emprestimo.status = 'devolvido';
+
+    const exemplar = Exemplar.find(
+        e => e.id === emprestimo.exemplar_id
+    );
+    
+    if(exemplar){
+        exemplar.status = 'disponível';
+    }
+
+    res.status(200).json({ mensagem: 'Empréstimo devolvido com sucesso', emprestimo });
 });
 
 //Rotas delete
